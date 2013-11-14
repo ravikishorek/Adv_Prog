@@ -7,8 +7,8 @@ using namespace std;
 double my_func(double param){
     double result; 
 //    param = param* PI / 180;
-    result = sin(param);
-//    result = sin( param * PI / 180 );
+//    result = sin(param);
+    result = (180.0 / PI) *sin( param * PI / 180 );
    // result = param * param;
     return result;
 }
