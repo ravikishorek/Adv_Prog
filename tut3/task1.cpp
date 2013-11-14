@@ -1,6 +1,12 @@
+/*
+ * task1.c
+ *
+ *  Created on: Nov 12, 2013
+ *      Author: ravi
+ */
 //============================================================================
 // Name        : TextAdventure.cpp
-// Author      : 
+// Author      :
 // Version     :
 // Copyright   : Your copyright notice
 // Description : Hello World in C++, Ansi-style
@@ -48,28 +54,28 @@ int getInput(string *options, int n)
 
 void lab()
 {
-	cout << "Congratulations! You made it to the lab!!! And more";
-	cout<<"important: with your brilliant outward appearance you got +1";
+	cout << "Congratulations! You made it to the lab!!! And more" <<endl;
+	cout<<"important: with your brilliant outward appearance you got +1"<<endl;
 	cout <<" at that hot girl! To be continued …. "<<endl;
 }
 
 void faillab()
 {
-	cout <<" Not only you came late to the lab, which annoys your prof";
-	cout <<" you also failed in impressing your favorite girl, nor did you ";
-	cout <<" have any fun (party ..)…";
+	cout <<" Not only you came late to the lab, which annoys your prof"<<endl;
+	cout <<" you also failed in impressing your favorite girl, nor did you "<<endl;
+	cout <<" have any fun (party ..)…"<<endl;
 	cout <<" Total goals achieved: 0 of 3.. Please try again!"<<endl;
 }
-	
+
 
 
 void brushTeeth()
 {
-	cout<<"You invest time into brushing your teeth like nobody has ever done it";
-	cout<<" .A test on the dog lets you being confident to be successful.";
-	cout <<" Go to the lab now or use your new confidence to go to a crazy party";
+	cout<<"You invest time into brushing your teeth like nobody has ever done it"<<endl;
+	cout<<" .A test on the dog lets you being confident to be successful."<<endl;
+	cout <<" Go to the lab now or use your new confidence to go to a crazy party"<<endl;
 	cout <<" in Studentenstadt? (lab/party)"<<endl;
-	
+
 	string options[] = {"lab","party"};
 	int choice = getInput(options,2);
 
@@ -89,9 +95,9 @@ void brushTeeth()
 
 void doenerProblem()
 {
-	cout<<"You eat the doener, smell terribly and head towards the laboratory. ";
-	cout<<"You remember, that your lab partner is a super nice girl that you ";
-	cout<<"like to impress. Brushing your teeth would be an option ";
+	cout<<"You eat the doener, smell terribly and head towards the laboratory. "<<endl;
+	cout<<"You remember, that your lab partner is a super nice girl that you "<<endl;
+	cout<<"like to impress. Brushing your teeth would be an option "<<endl;
 	cout<<"before talking to her. Brush teeth and come even later for the lab?"<<endl;
 	cout<<"(yes/no)"<<endl;
 	string options[] = {"yes","no"};
@@ -113,11 +119,11 @@ void doenerProblem()
 
 void suite()
 {
-	cout<<"You choose the black suite with red tie and white shirt.";
-	cout <<"Looking awesome you think about your situation: Spend the rest of";
-	cout<<" the day in the lab, or go for a suite-up party in Munich downtown?";
+	cout<<"You choose the black suite with red tie and white shirt."<<endl;
+	cout <<"Looking awesome you think about your situation: Spend the rest of"<<endl;
+	cout<<" the day in the lab, or go for a suite-up party in Munich downtown?"<<endl;
 	cout << "(lab/party)";
-	
+
 	string options[] = {"lab","party"};
 	int choice = getInput(options,2);
 
@@ -137,14 +143,14 @@ void suite()
 
 void salad()
 {
-	cout<<"You pay your last euros on that premium salad and really enjoy it.";
-	cout<<"Unfortunately some of the white sauce got onto your t-shirt. ";
-	cout<<"Normally you do not care, but your lab partner today is a lovely girl ";
-	cout<<"and you like to impress her";
-	cout<<"You remember that in your closet in university you still have your suite.";
+	cout<<"You pay your last euros on that premium salad and really enjoy it."<<endl;
+	cout<<"Unfortunately some of the white sauce got onto your t-shirt. "<<endl;
+	cout<<"Normally you do not care, but your lab partner today is a lovely girl "<<endl;
+	cout<<"and you like to impress her"<<endl;
+	cout<<"You remember that in your closet in university you still have your suite."<<endl;
 	cout<<"Spend time to change cloth?"<<endl;
 	cout<<"(suite/dirty)"<<endl;
-	
+
 	string options[] = {"suite","dirty"};
 	int choice = getInput(options,2);
 
@@ -164,9 +170,9 @@ void salad()
 
 void eat()
 {
-	cout<<"You decide to eat. You can either get a Doener with plenty ";
-	cout<<"of onion and garlic which is the quick and cheap solution, ";
-	cout<<"or you get some premium vegetarian Caesar's salad with shrimps.";
+	cout<<"You decide to eat. You can either get a Doener with plenty "<<endl;
+	cout<<"of onion and garlic which is the quick and cheap solution, "<<endl;
+	cout<<"or you get some premium vegetarian Caesar's salad with shrimps."<<endl;
 	cout<<" What do you buy?"<<endl;
 	cout<<"(doener/salad)"<<endl;
 	string options[] = {"doener","salad"};
@@ -187,9 +193,9 @@ void eat()
 
 void enterHall()
 {
-	cout<<"You enter the hall, and suffer from severe hunger. You feel that";
-	cout << "not eating now will result in a black-out. What do you do?";
-	cout << "(eat/go to lab)"<<endl;	
+	cout<<"You enter the hall, and suffer from severe hunger. You feel that"<<endl;
+	cout << "not eating now will result in a black-out. What do you do?"<<endl;
+	cout << "(eat/go to lab)"<<endl;
 	string options[] = {"eat","go to lab"};
 	int choice = getInput(options,2);
 
@@ -198,10 +204,10 @@ void enterHall()
 		eat();
 		break;
 	case 1:
-		cout <<" Right before you enter the lab you fade and loose consciousness";
-		cout <<". They bring you to the hospital where you have to stay exactly ";
-		cout<<" 6 days and 20 hour. ";
-		cout <<" Leaving the hospital you notice that it is the perfect time to";
+		cout <<" Right before you enter the lab you fade and loose consciousness"<<endl;
+		cout <<". They bring you to the hospital where you have to stay exactly "<<endl;
+		cout<<" 6 days and 20 hour. "<<endl;
+		cout <<" Leaving the hospital you notice that it is the perfect time to"<<endl;
 		cout <<" go to the lab course. You go into U6 and head towards Garching"<<endl;
 		atUbahn2();
 		break;
@@ -214,10 +220,10 @@ void enterHall()
 
 void leavingStation()
 {
-	cout<<"After leaving the subway station you suffer from hunger.  However,";
-	cout<<" you have to get to the lab as soon as possible. What do you want to";
+	cout<<"After leaving the subway station you suffer from hunger.  However,"<<endl;
+	cout<<" you have to get to the lab as soon as possible. What do you want to"<<endl;
 	cout<<" do next?  (eat/enter hall)"<<endl;
-	
+
 	string options[] = {"eat","enter hall"};
 	int choice = getInput(options,2);
 
@@ -238,7 +244,7 @@ void leavingStation()
 
 void atUbahn2()
 {
-	cout<<"One hour later, you’ve just re-arrived at the final destination Garching";
+	cout<<"One hour later, you’ve just re-arrived at the final destination Garching"<<endl;
 	cout<<"Forschungszentrum."<<endl<< "Do you want to leave?"<<endl;
 	cout<<"(yes/no)?"<<endl;
 	string options[] = {"yes","no"};
@@ -261,10 +267,10 @@ void atUbahn2()
 
 void atUbahn()
 {
-	cout<<"After an exhaustive party last night you are sitting in the sub";
-	cout<<"which just reached the final destination Garching Forschungszentrum.";
+	cout<<"After an exhaustive party last night you are sitting in the sub"<<endl;
+	cout<<"which just reached the final destination Garching Forschungszentrum."<<endl;
 	cout<<"Do you want to leave?  (no/yes)"<<endl;
-	string options[] = {"yes","no"};
+	string options[] = {"yes please","no"};
 	int choice = getInput(options,2);
 
 	switch (choice){
@@ -288,3 +294,7 @@ int main() {
 	atUbahn();
 	return 0;
 }
+
+
+
+

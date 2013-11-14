@@ -1,3 +1,9 @@
+/*
+ * task2.cpp
+ *
+ *  Created on: Nov 12, 2013
+ *      Author: ravi
+ */
 #include <stdlib.h>
 #include <iostream>
 #include <cmath>
@@ -14,7 +20,7 @@ void printPurpose(){
 
 int validCounter(int max){
 	int counter = 0;
-	
+
 	for(int i = 0; i < max; i++){
 		float x = random_var();
 		float y = random_var();
@@ -32,9 +38,9 @@ void piPrint(int max, int counter){
 }
 
 int main(int argc, char *argv[]){
-	int max = 10000000;
+	int max = 1000000;
 	int counter;
-	
+
 	unsigned int maxNumber;
 
 	printPurpose();
