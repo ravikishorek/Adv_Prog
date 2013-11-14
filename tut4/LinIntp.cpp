@@ -2,12 +2,12 @@
 
 using namespace std;
 
-double interPolation(double x_a, double x_b, double y_a, double y_b, double y_r){
-    double x_r;
+double interPolation(double x_a, double x_b, double y_a, double y_b, double x_r){
+    double y_r;
 
-    x_r = x_a + (y_r - y_a)*(x_b-x_a) / (y_b - y_a);    
+    y_r = y_a + (y_b - y_a)*(x_r-x_a) / (x_b - x_a);    
 //    y_r = y_a + (( y_b - y_a ) * ( x_r - x_a )) / ( x_b - x_a );
-    return x_r;
+    return y_r;
 }
 
 void printPurpose(){
@@ -34,8 +34,8 @@ int main(int argc, char **argv){
         cin>>y_a; 
         cout<<"Please input y_b:"<<endl;
         cin>>y_b; 
-        cout<<"Please input y_r:"<<endl;
-        cin>>y_r;
+        cout<<"Please input x_r:"<<endl;
+        cin>>x_r;
         
         if(x_b == x_a){
             cout << "error: please input different value of x_a and x_b."<<endl;

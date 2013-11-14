@@ -6,9 +6,10 @@ using namespace std;
 
 double my_func(double param){
     double result; 
-    
-    result = sin( param * PI / 180 );
-//    result = param * param;
+//    param = param* PI / 180;
+    result = sin(param);
+//    result = sin( param * PI / 180 );
+   // result = param * param;
     return result;
 }
 
