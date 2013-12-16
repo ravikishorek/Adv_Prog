@@ -13,25 +13,25 @@ using namespace std;
 typedef chrono::time_point< chrono::system_clock> TimeStamp;
 
 class Name{
-public:
-    Name(string first, string last):firstName(first), lastName(last){};
+    public:
+        Name(string first, string last):firstName(first), lastName(last){};
 
-    string getFirstName() const{
-        return firstName;
-    };
+        string getFirstName() const{
+            return firstName;
+        };
 
-    string getLastName() const{
-        return lastName;
-    }
+        string getLastName() const{
+            return lastName;
+        }
 
-private:
-    string firstName;
-    string lastName;
+    private:
+        string firstName;
+        string lastName;
 };
 
 struct name_compare{
     bool operator() (const Name& name1, const Name& name2){
-       return (name1.getFirstName() < name2.getFirstName());
+        return (name1.getFirstName() < name2.getFirstName());
     }
 };
 
@@ -40,8 +40,11 @@ bool compare(const double &left, const double &right){
 }
 
 void SplitMerge(vector<double> &, vector<double>::iterator &, vector<double>::iterator &, vector<double> &);
+
 void Merge(vector<double> &, vector<double>::iterator &, vector<double>::iterator &, vector<double>::iterator &, vector<double> &);
+
 void NameSplitMerge(vector<Name> &, vector<Name>::iterator &, vector<Name>::iterator &, vector<Name> &);
+
 void NameMerge(vector<Name> &, vector<Name>::iterator &, vector<Name>::iterator &, vector<Name>::iterator &, vector<Name> &);
 
 void printTiming(const TimeStamp& start, string operation){
@@ -81,7 +84,7 @@ void SplitMerge(vector<double> &A, vector<double>::iterator &iBegin, vector<doub
         //cout<<"merge finshed!"<<endl;
         return;    //   consider it sorted
     }                       
-        
+
     iMiddle = iBegin+distance(iBegin,iEnd)/2;
 
     SplitMerge(A, iBegin,  iMiddle, B);  // split / merge left  half
@@ -89,7 +92,7 @@ void SplitMerge(vector<double> &A, vector<double>::iterator &iBegin, vector<doub
     Merge(A, iBegin, iMiddle, iEnd, B);  // merge the two half runs
     A=B;
 }
- 
+
 void Merge(vector<double> &A, vector<double>::iterator &iBegin, vector<double>::iterator &iMiddle, vector<double>::iterator &iEnd, vector<double> &B)
 {
     vector<double>::iterator i0;
@@ -127,7 +130,7 @@ void NameSplitMerge(vector<Name> &A, vector<Name>::iterator &iBegin, vector<Name
         //cout<<"merge finshed!"<<endl;
         return;    //   consider it sorted
     }                       
-        
+
     iMiddle = iBegin+distance(iBegin,iEnd)/2;
 
     NameSplitMerge(A, iBegin,  iMiddle, B);  // split / merge left  half
@@ -135,7 +138,7 @@ void NameSplitMerge(vector<Name> &A, vector<Name>::iterator &iBegin, vector<Name
     NameMerge(A, iBegin, iMiddle, iEnd, B);  // merge the two half runs
     A=B;
 }
- 
+
 void NameMerge(vector<Name> &A, vector<Name>::iterator &iBegin, vector<Name>::iterator &iMiddle, vector<Name>::iterator &iEnd, vector<Name> &B)
 {
     vector<Name>::iterator i0;
@@ -178,23 +181,23 @@ int main () {
     /**  generate vector & std sort*/
     TimeStamp start1 = chrono::system_clock::now();
     vec = vecGenerator(length);
-    
+
     sort(vec.begin(), vec.end(), compare);
     //printVec(vec);
     printTiming(start1, "std::sort");
-/***************************************************************/
+    /***************************************************************/
 
     /**  generate vector & std sort*/
     TimeStamp start2 = chrono::system_clock::now();
     vec = vecGenerator(length);
-    
+
     vector<double> sorted = vec;   //work vector ensure has the same size of the original vector
-    
+
     MergeSort(length, vec, sorted);
 
     //printVec(vec);
     printTiming(start2, "merge_sort");
-/***************************************************************/
+    /***************************************************************/
 
     /** reading file from the file in namelist */
     TimeStamp start3 = chrono::system_clock::now();
@@ -216,15 +219,15 @@ int main () {
     cout<<"total number of namelist"<<counter<<endl;
     sort(strvec.begin(),strvec.end(), name_compare());
     printTiming(start3, "std::sort namelist");
-/***************************************************************/
-    
+    /***************************************************************/
+
     TimeStamp start4 = chrono::system_clock::now();
     vector<Name> strsorted = strvec_merge;
     NameMergeSort(counter, strvec_merge, strsorted);
     printTiming(start4, "merge_sort namelist");
-//    for(Name i: strvec_merge)
-//    {
-//        cout<<i.getFirstName()<<" "<<i.getLastName()<<endl;
-//    }    
+    //    for(Name i: strvec_merge)
+    //    {
+    //        cout<<i.getFirstName()<<" "<<i.getLastName()<<endl;
+    //    }    
     return 0;
 }
