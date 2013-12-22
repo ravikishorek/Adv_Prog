@@ -99,7 +99,7 @@ int calc_mem_align(void *address) {
 int main() {
 	std::cout << "!!!Hello World!!!" << std::endl; // prints !!!Hello World!!!
 
-	std::vector<int, AlignmentAllocator<int, 32> > bla(5);
+	std::vector<int, AlignmentAllocator<int, 128> > bla(5);
 	std::vector<int> hi(5);
 
 

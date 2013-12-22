@@ -30,6 +30,7 @@ int main(int argc, char *argv[]) {
     double random_val = distribution(generator);
     double temp;
     for(std::vector<double>::const_iterator i = v.begin(); i != v.end(); ++i) {
+        //*i = distribution(generator);
         v[i-v.begin()] = distribution(generator);
     }
     std::sort(v.begin(), v.end(), compare);
